@@ -22,7 +22,7 @@ impl Rectangle {
         }
     }
 }
-pub fn main() {
+pub fn run() {
     let rect1 = Rectangle {
         width: 30,
         height: 50,

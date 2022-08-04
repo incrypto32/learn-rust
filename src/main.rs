@@ -1,5 +1,6 @@
 use std::io;
 use std::io::Write;
+mod arrays;
 mod data_types;
 mod functions;
 mod guessing_game;
@@ -19,21 +20,22 @@ fn main() {
     io::stdin()
         .read_line(&mut choice)
         .expect("Failed to read input");
-    println!("You guessed: {}", choice);
+    println!("Your choice: {}", choice);
 
     let choice: u32 = choice.trim().parse().expect("Please type a number!");
     match choice {
-        1 => guessing_game::main(),
-        2 => variables::main(),
-        3 => data_types::main(),
-        4 => functions::main(),
-        5 => ifelse::main(),
-        6 => r#loop::main(),
-        7 => structs::main(),
+        1 => guessing_game::run(),
+        2 => variables::run(),
+        3 => data_types::run(),
+        4 => functions::run(),
+        5 => ifelse::run(),
+        6 => r#loop::run(),
+        7 => structs::run(),
         8 => print::run(),
         9 => types::run(),
         10 => strings::run(),
         11 => tuples::run(),
+        12 => arrays::run(),
         _ => (),
     }
 }

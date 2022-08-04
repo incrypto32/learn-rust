@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
     use rand::Rng;
     use std::cmp::Ordering;
     use std::io::{stdin, stdout, Write};

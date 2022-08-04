@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
 
     // Expressions can return value
     let y = {

@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
 
 
     let mut counter = 0;

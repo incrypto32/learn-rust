@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
     let number = 6;
 
     if number % 4 == 0 {

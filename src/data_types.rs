@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
     // Parsing a string to u32 you need to specify the type here
     //  If type isnt specified compiler wont know which data type to parse into
     let guess: u32 = "42".parse().expect("Not a number!");
@@ -24,12 +24,12 @@ pub fn main() {
     // division
     let quotient = 56.7 / 32.2;
 
-    // remainder
-    let remainder = 43 % 5;
+    // rerunder
+    let rerunder = 43 % 5;
 
     println!(
-        "sum : {}\n difference : {}\n product:{}\n quotient:{}\n remainder:{}\n",
-        sum, difference, product, quotient, remainder
+        "sum : {}\n difference : {}\n product:{}\n quotient:{}\n rerunder:{}\n",
+        sum, difference, product, quotient, rerunder
     );
 
     // The boolean type
@@ -74,7 +74,7 @@ pub fn main() {
         "November",
         "December",
     ];
-
+    
     println!("The array is {:?}",months);
 
     let a: [i32; 5] = [1, 2, 3, 4, 5];

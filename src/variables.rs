@@ -1,4 +1,4 @@
-pub fn main() {
+pub fn run() {
     // mut keyword is so that the varibale is mutable
     // otherwise the variable cannot be updated
     let mut x = 5;
