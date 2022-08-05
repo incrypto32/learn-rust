@@ -15,9 +15,9 @@ pub fn run() {
     let number = if condition { 5 } else { 6 };
 
     println!("The value of number is: {}", number);
-    println!("It is : {}",blah())
+    println!("It is : {}", blah())
 }
 
-fn blah() -> i32{
+fn blah() -> i32 {
     return 2 + 2;
 }

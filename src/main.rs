@@ -6,6 +6,7 @@ mod functions;
 mod guessing_game;
 mod ifelse;
 mod r#loop;
+mod option;
 mod print;
 mod strings;
 mod structs;
@@ -36,6 +37,7 @@ fn main() {
         10 => strings::run(),
         11 => tuples::run(),
         12 => arrays::run(),
+        13 => option::run(),
         _ => (),
     }
 }
