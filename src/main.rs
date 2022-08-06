@@ -13,6 +13,7 @@ mod structs;
 mod tuples;
 mod types;
 mod variables;
+mod enums;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -38,6 +39,7 @@ fn main() {
         11 => tuples::run(),
         12 => arrays::run(),
         13 => option::run(),
+        14 => enums::run(),
         _ => (),
     }
 }
