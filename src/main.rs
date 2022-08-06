@@ -2,6 +2,7 @@ use std::io;
 use std::io::Write;
 mod arrays;
 mod data_types;
+mod enums;
 mod functions;
 mod guessing_game;
 mod ifelse;
@@ -13,7 +14,6 @@ mod structs;
 mod tuples;
 mod types;
 mod variables;
-mod enums;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -40,6 +40,7 @@ fn main() {
         12 => arrays::run(),
         13 => option::run(),
         14 => enums::run(),
+        15 => ifelse::run(),
         _ => (),
     }
 }
