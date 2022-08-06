@@ -15,9 +15,21 @@ enum IpAddrKind {
 // The earlier example doesn not have actual data in the enum.
 // This is an example of an enum with actual data.
 #[derive(Debug)]
-enum ipAddr {
+enum IpAddr {
     V4(u8, u8, u8, u8),
     V6(String),
+}
+
+impl IpAddr {
+    fn print(&self) {
+        println!(
+            "{:?}",
+            match self {
+                IpAddr::V4(a, b, c, d) => format!("{}.{}.{}.{}", a, b, c, d),
+                IpAddr::V6(a) => a.to_string(),
+            }
+        );
+    }
 }
 
 pub fn run() {
@@ -37,8 +49,10 @@ pub fn run() {
     println!("no is {:?}", no);
 
     // Similar code for ipAddr struct
-    let home = ipAddr::V4(127, 0, 0, 1);
-    let loopback = ipAddr::V6(String::from("::1"));
+    let home = IpAddr::V4(127, 0, 0, 1);
+    let loopback = IpAddr::V6(String::from("::1"));
     println!("home is {:?}", home);
     println!("loopback is {:?}", loopback);
+    home.print();
+    loopback.print();
 }
