@@ -21,4 +21,16 @@ pub fn run() {
         Some(c) => println!("The third element is {}", c),
         None => println!("There is no value at the given index"),
     }
+
+    for i in &v {
+        println!("{}", i);
+    }
+
+    for i in &mut v {
+        *i += 10;
+    }
+
+    for i in &v {
+        println!("{}", i);
+    }
 }
