@@ -11,6 +11,14 @@ pub fn run() {
     let v2 = vec![1, 2, 3];
 
     // Acessing elements in vector
+
+    // Directly. This approach can cause index out of bound error
     let third = &v[2];
     println!("The third element is {}", third);
+
+    // Indirectly using vec.get()
+    match v.get(2) {
+        Some(c) => println!("The third element is {}", c),
+        None => println!("There is no value at the given index"),
+    }
 }
