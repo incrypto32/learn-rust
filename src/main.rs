@@ -1,6 +1,8 @@
 use std::io;
 use std::io::Write;
+
 mod arrays;
+mod collections;
 mod data_types;
 mod enums;
 mod functions;
@@ -41,6 +43,7 @@ fn main() {
         13 => option::run(),
         14 => enums::run(),
         15 => ifelse::run(),
+        16 => collections::run(),
         _ => (),
     }
 }
