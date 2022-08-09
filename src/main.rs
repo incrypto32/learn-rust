@@ -7,6 +7,7 @@ mod data_types;
 mod enums;
 mod functions;
 mod guessing_game;
+mod hashmaps;
 mod ifelse;
 mod r#loop;
 mod option;
@@ -44,6 +45,7 @@ fn main() {
         14 => enums::run(),
         15 => ifelse::run(),
         16 => collections::run(),
+        17 => hashmaps::run(),
         _ => (),
     }
 }
