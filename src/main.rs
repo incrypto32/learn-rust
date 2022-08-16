@@ -17,6 +17,7 @@ mod structs;
 mod tuples;
 mod types;
 mod variables;
+mod panic;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -46,6 +47,7 @@ fn main() {
         15 => ifelse::run(),
         16 => collections::run(),
         17 => hashmaps::run(),
+        18 => panic::run(),
         _ => (),
     }
 }
