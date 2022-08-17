@@ -18,6 +18,7 @@ mod tuples;
 mod types;
 mod variables;
 mod panic;
+mod error_handling_result_enum;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -48,6 +49,7 @@ fn main() {
         16 => collections::run(),
         17 => hashmaps::run(),
         18 => panic::run(),
+        19 => error_handling_result_enum::run(),
         _ => (),
     }
 }
