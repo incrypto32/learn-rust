@@ -20,6 +20,7 @@ mod structs;
 mod tuples;
 mod types;
 mod variables;
+mod struct_generics;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -52,6 +53,7 @@ fn main() {
         18 => panic::run(),
         19 => error_handling_result_enum::run(),
         20 => generics::run(),
+        21 => struct_generics::run(),
         _ => (),
     }
 }
