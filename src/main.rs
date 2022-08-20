@@ -5,20 +5,21 @@ mod arrays;
 mod collections;
 mod data_types;
 mod enums;
+mod error_handling_result_enum;
 mod functions;
+mod generics;
 mod guessing_game;
 mod hashmaps;
 mod ifelse;
 mod r#loop;
 mod option;
+mod panic;
 mod print;
 mod strings;
 mod structs;
 mod tuples;
 mod types;
 mod variables;
-mod panic;
-mod error_handling_result_enum;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -50,6 +51,7 @@ fn main() {
         17 => hashmaps::run(),
         18 => panic::run(),
         19 => error_handling_result_enum::run(),
+        20 => generics::run(),
         _ => (),
     }
 }
