@@ -10,7 +10,7 @@ pub fn run() {
     scores.insert(yellow, 50);
 
     let team_name = String::from("Blue");
-    let score = scores.get(&team_name);
+    let _score = scores.get(&team_name);
 
     for (key, value) in &scores {
         println!("{} {}", key, value);

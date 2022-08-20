@@ -5,7 +5,7 @@ use std::io::{self, ErrorKind};
 pub fn run() {
     let f = File::open("a.txt");
 
-    let f = match f {
+    let _f = match f {
         Ok(fc) => {
             println!("File Found!!");
             fc
@@ -22,7 +22,7 @@ pub fn run() {
         },
     };
 
-    let f = File::open("hello.txt").unwrap_or_else(|error| {
+    let _f = File::open("hello.txt").unwrap_or_else(|error| {
         if error.kind() == ErrorKind::NotFound {
             File::create("hello.txt").unwrap_or_else(|error| {
                 panic!("Problem creating the file : {:?}", error);
@@ -33,12 +33,13 @@ pub fn run() {
     });
 
     // Just panics when file is not available
-    let f = File::open("c.txt").unwrap();
+    let _f = File::open("c.txt").unwrap();
     // Same with custom message
-    let f = File::open("c.txt").expect("Failed to open");
+    let _f = File::open("c.txt").expect("Failed to open");
 
-    read_username_from_file();
-    read_username_from_file_2();
+    read_username_from_file().unwrap();
+    read_username_from_file_2().unwrap();
+    read_username_from_file_3().unwrap();
 }
 
 fn read_username_from_file() -> Result<String, io::Error> {
