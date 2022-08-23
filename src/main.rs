@@ -16,11 +16,12 @@ mod option;
 mod panic;
 mod print;
 mod strings;
+mod struct_generics;
 mod structs;
 mod tuples;
 mod types;
 mod variables;
-mod struct_generics;
+mod traits;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -54,6 +55,7 @@ fn main() {
         19 => error_handling_result_enum::run(),
         20 => generics::run(),
         21 => struct_generics::run(),
+        22 => traits::run(),
         _ => (),
     }
 }
