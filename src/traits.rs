@@ -67,11 +67,14 @@ pub fn _notify3<T: Summary + Display>(_item1: &T, _item2: &T) {}
 
 fn _some_function<T: Display + Clone, U: Clone + Debug>(_t: &T, _u: &U) {}
 
-
 // A More readable version of above
 fn _some_function2<T, U>(_t: &T, _u: &U)
 where
     T: Display + Clone,
     U: Clone + Debug,
 {
+}
+
+// Implement a trait on a another trait
+impl<T: Display> Summary for T {
 }
