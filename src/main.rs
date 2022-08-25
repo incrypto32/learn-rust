@@ -22,6 +22,7 @@ mod tuples;
 mod types;
 mod variables;
 mod traits;
+mod lifetimes;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -56,6 +57,7 @@ fn main() {
         20 => generics::run(),
         21 => struct_generics::run(),
         22 => traits::run(),
+        23 => lifetimes::run(),
         _ => (),
     }
 }
