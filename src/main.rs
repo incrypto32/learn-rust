@@ -11,6 +11,7 @@ mod generics;
 mod guessing_game;
 mod hashmaps;
 mod ifelse;
+mod lifetimes;
 mod r#loop;
 mod option;
 mod panic;
@@ -18,11 +19,11 @@ mod print;
 mod strings;
 mod struct_generics;
 mod structs;
+mod traits;
 mod tuples;
 mod types;
 mod variables;
-mod traits;
-mod lifetimes;
+mod closures;
 
 fn main() {
     print!("Enter your Choice : ");
@@ -58,6 +59,7 @@ fn main() {
         21 => struct_generics::run(),
         22 => traits::run(),
         23 => lifetimes::run(),
+        24 => closures::run(),
         _ => (),
     }
 }
