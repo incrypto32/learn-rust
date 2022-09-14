@@ -43,12 +43,14 @@ fn generate_workout(intensity: u32, random_number: u32) {
         thread::sleep(Duration::from_secs(2));
         num
     };
+
+    let mut cached_result = Cacher::new(expensive_closure);
     println!("random_number : {}", random_number);
     if intensity < 25 {
-        println!("Do {} pushups today", expensive_closure(intensity));
+        println!("Do {} pushups today", cached_result.value(intensity));
 
-        println!("Do {} situps today", expensive_closure(intensity));
+        println!("Do {} situps today", cached_result.value(intensity));
     } else if intensity < 50 {
-        println!("Do {} pushups today", expensive_closure(intensity));
+        println!("Do {} pushups today", cached_result.value(intensity));
     }
 }
