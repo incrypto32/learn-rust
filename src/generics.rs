@@ -1,3 +1,4 @@
+
 pub fn run() {
     let num_list = vec![4, 2, 3, 10, 6, 4];
     let char_list = vec!['a', 'b', 'k', 'c'];
