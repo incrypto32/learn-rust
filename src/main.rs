@@ -2,6 +2,8 @@ use std::io;
 use std::io::Write;
 
 mod arrays;
+mod asyncawait;
+mod closures;
 mod collections;
 mod data_types;
 mod enums;
@@ -23,9 +25,9 @@ mod traits;
 mod tuples;
 mod types;
 mod variables;
-mod closures;
 
-fn main() {
+#[tokio::main]
+async fn main() {
     print!("Enter your Choice : ");
     io::stdout().flush().unwrap();
     let mut choice = String::new();
@@ -60,6 +62,7 @@ fn main() {
         22 => traits::run(),
         23 => lifetimes::run(),
         24 => closures::run(),
+        25 => asyncawait::run().await,
         _ => (),
     }
 }
