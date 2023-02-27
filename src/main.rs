@@ -25,6 +25,7 @@ mod traits;
 mod tuples;
 mod types;
 mod variables;
+mod macros;
 
 #[tokio::main]
 async fn main() {
@@ -63,6 +64,7 @@ async fn main() {
         23 => lifetimes::run(),
         24 => closures::run(),
         25 => asyncawait::run().await,
+        26 => macros::run(),
         _ => (),
     }
 }
